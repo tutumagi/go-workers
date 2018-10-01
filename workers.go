@@ -95,6 +95,10 @@ func StatsServer(port int) {
 	}
 }
 
+func HasStarted() bool {
+	return started
+}
+
 func startSchedule() {
 	if schedule == nil {
 		schedule = newScheduled(RETRY_KEY, SCHEDULED_JOBS_KEY)
